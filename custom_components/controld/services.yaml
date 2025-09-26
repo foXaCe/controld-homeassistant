@@ -1,0 +1,148 @@
+learn_ip:
+  name: Learn IP Address
+  description: Learn a new IP address for device access
+  fields:
+    device_id:
+      name: Device ID
+      description: The device ID to learn the IP for
+      required: true
+      selector:
+        text:
+    ip_address:
+      name: IP Address
+      description: The IP address to learn (optional, uses current IP if not specified)
+      required: false
+      selector:
+        text:
+
+delete_learned_ip:
+  name: Delete Learned IP
+  description: Delete a learned IP address from device access
+  fields:
+    device_id:
+      name: Device ID
+      description: The device ID to delete the IP from
+      required: true
+      selector:
+        text:
+    ip_address:
+      name: IP Address
+      description: The IP address to delete
+      required: true
+      selector:
+        text:
+
+create_device:
+  name: Create Device
+  description: Create a new ControlD device
+  fields:
+    name:
+      name: Device Name
+      description: Name for the new device
+      required: true
+      selector:
+        text:
+    profile_id:
+      name: Profile ID
+      description: Profile to assign to the device
+      required: true
+      selector:
+        text:
+    device_type:
+      name: Device Type
+      description: Type of device to create
+      required: false
+      default: "other"
+      selector:
+        select:
+          options:
+            - "router"
+            - "mobile"
+            - "desktop"
+            - "other"
+
+delete_device:
+  name: Delete Device
+  description: Delete a ControlD device
+  fields:
+    device_id:
+      name: Device ID
+      description: The device ID to delete
+      required: true
+      selector:
+        text:
+
+modify_device:
+  name: Modify Device
+  description: Modify a ControlD device
+  fields:
+    device_id:
+      name: Device ID
+      description: The device ID to modify
+      required: true
+      selector:
+        text:
+    name:
+      name: Device Name
+      description: New name for the device
+      required: false
+      selector:
+        text:
+    profile_id:
+      name: Profile ID
+      description: New profile to assign
+      required: false
+      selector:
+        text:
+
+create_profile:
+  name: Create Profile
+  description: Create a new ControlD profile
+  fields:
+    name:
+      name: Profile Name
+      description: Name for the new profile
+      required: true
+      selector:
+        text:
+
+delete_profile:
+  name: Delete Profile
+  description: Delete a ControlD profile
+  fields:
+    profile_id:
+      name: Profile ID
+      description: The profile ID to delete
+      required: true
+      selector:
+        text:
+
+bulk_toggle_filters:
+  name: Bulk Toggle Filters
+  description: Enable or disable multiple filters at once
+  fields:
+    profile_id:
+      name: Profile ID
+      description: The profile ID to modify
+      required: true
+      selector:
+        text:
+    filter_category:
+      name: Filter Category
+      description: Category of filters to toggle
+      required: true
+      selector:
+        select:
+          options:
+            - "security"
+            - "privacy"
+            - "adult_content"
+            - "social"
+            - "all"
+    enable:
+      name: Enable
+      description: Whether to enable or disable the filters
+      required: true
+      default: true
+      selector:
+        boolean:

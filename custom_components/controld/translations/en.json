@@ -1,0 +1,75 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ControlD Setup",
+        "description": "Set up your ControlD integration. Get your API token from: {api_url}",
+        "data": {
+          "api_token": "API Token",
+          "update_interval": "Update Interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid API token",
+      "cannot_connect": "Cannot connect to ControlD API",
+      "ip_not_authorized": "IP address not authorized for this token. Check IP restrictions in your ControlD dashboard",
+      "readonly_token_no_access": "Read-only token does not have access to this endpoint. Use a WRITE token",
+      "unknown": "Unknown error occurred"
+    },
+    "abort": {
+      "already_configured": "ControlD is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "ControlD Options",
+        "description": "Configure ControlD options",
+        "data": {
+          "update_interval": "Update Interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "profiles_total": {
+        "name": "Total Profiles"
+      },
+      "devices_total": {
+        "name": "Total Devices"
+      },
+      "devices_active": {
+        "name": "Active Devices"
+      },
+      "total_clients": {
+        "name": "Total Clients"
+      },
+      "total_ips": {
+        "name": "Total IP Addresses"
+      },
+      "router_devices": {
+        "name": "Router Devices"
+      },
+      "mobile_devices": {
+        "name": "Mobile Devices"
+      }
+    },
+    "switch": {
+      "profile": {
+        "name": "Profile {profile_name}"
+      }
+    }
+  },
+  "services": {
+    "update_profile": {
+      "name": "Update Profile",
+      "description": "Update a ControlD profile configuration"
+    },
+    "toggle_profile": {
+      "name": "Toggle Profile",
+      "description": "Enable or disable a ControlD profile"
+    }
+  }
+}

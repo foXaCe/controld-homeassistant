@@ -1,0 +1,75 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configuration ControlD",
+        "description": "Configurez votre intégration ControlD. Obtenez votre jeton API depuis : {api_url}",
+        "data": {
+          "api_token": "Jeton API",
+          "update_interval": "Intervalle de mise à jour (secondes)"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Jeton API invalide",
+      "cannot_connect": "Impossible de se connecter à l'API ControlD",
+      "ip_not_authorized": "Adresse IP non autorisée pour ce jeton. Vérifiez les restrictions IP dans votre dashboard ControlD",
+      "readonly_token_no_access": "Le jeton en lecture seule n'a pas accès à cet endpoint. Utilisez un jeton WRITE",
+      "unknown": "Une erreur inconnue s'est produite"
+    },
+    "abort": {
+      "already_configured": "ControlD est déjà configuré"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options ControlD",
+        "description": "Configurer les options ControlD",
+        "data": {
+          "update_interval": "Intervalle de mise à jour (secondes)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "profiles_total": {
+        "name": "Profils totaux"
+      },
+      "devices_total": {
+        "name": "Appareils totaux"
+      },
+      "devices_active": {
+        "name": "Appareils actifs"
+      },
+      "total_clients": {
+        "name": "Clients totaux"
+      },
+      "total_ips": {
+        "name": "Adresses IP totales"
+      },
+      "router_devices": {
+        "name": "Routeurs"
+      },
+      "mobile_devices": {
+        "name": "Appareils mobiles"
+      }
+    },
+    "switch": {
+      "profile": {
+        "name": "Profil {profile_name}"
+      }
+    }
+  },
+  "services": {
+    "update_profile": {
+      "name": "Mettre à jour le profil",
+      "description": "Mettre à jour la configuration d'un profil ControlD"
+    },
+    "toggle_profile": {
+      "name": "Activer/désactiver le profil",
+      "description": "Activer ou désactiver un profil ControlD"
+    }
+  }
+}

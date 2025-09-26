@@ -1,0 +1,12 @@
+{
+  "domain": "controld",
+  "name": "ControlD",
+  "codeowners": ["@controld-addon"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/home-assistant-community-addons/addon-controld",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/home-assistant-community-addons/addon-controld/issues",
+  "requirements": ["aiohttp>=3.8.0"],
+  "version": "1.0.0"
+}
